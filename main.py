@@ -67,17 +67,17 @@ for index in range(len(uppercase_pool)):
      if len(password) == num_upper:
         break 
 
-for index in range(len((lowercase_pool)):
+for index in range(len(lowercase_pool)):
      password += random.shuffle(lowercase_pool)[index]
      if len(password) - len(num_upper) == num_lower:
         break
 
-for index in range(len((number_pool)):
+for index in range(len(number_pool)):
      password += random.shuffle(number_pool)[index]
      if len(password) - len(num_upper) -len(num_lower) == num_nums:
         break   
 
-for index in range(len((special_pool)):
+for index in range(len(special_pool)):
      password += random.shuffle(special_pool)[index]
      if len(password) - len(num_upper) - len(num_lower) - len(num_nums) == num_special:
         break 
