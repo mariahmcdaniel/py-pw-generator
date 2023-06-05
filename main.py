@@ -1,3 +1,5 @@
+import random
+
 uppercase_pool = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 lowercase_pool = uppercase_pool.lower()
 number_pool = "0123456789"
@@ -52,3 +54,6 @@ if num_left == 0:
   print(f"Your password will contain {num_special} special characters.")
 else:
   print(f"Your password will contain {num_special} special characters and the {num_left} remaining will be of a random character type")
+
+for index in range(len(uppercase_pool)):
+   
