@@ -54,6 +54,25 @@ if num_left == 0:
   print(f"Your password will contain {num_special} special characters.")
 else:
   print(f"Your password will contain {num_special} special characters and the {num_left} remaining will be of a random character type")
+  types = [num_upper, num_lower, num_nums, num_special]
+  for type in types:
+     type += 1
+     num_left -= 1
+     if num_left == 0:
+        break
+     
 
-for index in range(len(uppercase_pool)):
-   
+for index in range(len(random.shuffle(uppercase_pool))):
+     password += random.shuffle(uppercase_pool)[index]
+     if len(password) == num_upper:
+        break 
+
+for index in range(len(random.shuffle(lowercase_pool))):
+     password += random.shuffle(lowercase_pool)[index]
+     if len(password) - len(num_upper) == num_lower:
+        break
+
+for index in range(len(random.shuffle(number_pool))):
+     password += random.shuffle(number_pool)[index]
+     if len(password) - len(num_upper) -len(num_lower) == num_nums:
+        break            
