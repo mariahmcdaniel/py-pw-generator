@@ -1,7 +1,7 @@
 import random
 
 uppercase_pool = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-lowercase_pool = uppercase_pool.lower()
+lowercase_pool = "abcdefghijklmnopqrstuvwxyz"
 number_pool = "0123456789"
 special_pool = "!#$%&()*+,-./:;<=>?@[]^_`{|}~"
 password = ""
