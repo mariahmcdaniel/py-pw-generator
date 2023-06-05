@@ -75,17 +75,17 @@ for index in range(len(uppercase_pool)):
 
 for index in range(len(lowercase_pool)):
      password += lowercase_pool[index]
-     if len(password) - len(num_upper) == num_lower:
+     if len(password) - num_upper == num_lower:
         break
 
 for index in range(len(number_pool)):
      password += number_pool[index]
-     if len(password) - len(num_upper) -len(num_lower) == num_nums:
+     if len(password) - num_upper -num_lower == num_nums:
         break   
 
 for index in range(len(special_pool)):
      password += special_pool[index]
-     if len(password) - len(num_upper) - len(num_lower) - len(num_nums) == num_special:
+     if len(password) - num_upper - num_lower - num_nums == num_special:
         break 
 
 print(f"Your new password is: {random.shuffle(password)}")                              
