@@ -65,11 +65,12 @@ else:
         break
 
 
-s_uppercase_pool = str(random.shuffle(list(uppercase_pool)))
-s_lowercase_pool = str(random.shuffle(list(lowercase_pool)))
-s_number_pool = str(random.shuffle(list(number_pool)))
-s_special_pool = str(random.shuffle(list(special_pool)))
+s_uppercase_pool = ''.join(random.sample(uppercase_pool,len(uppercase_pool)))
+s_lowercase_pool = ''.join(random.sample(lowercase_pool,len(lowercase_pool)))
+s_number_pool = ''.join(random.sample(number_pool,len(number_pool)))
+s_special_pool = ''.join(random.sample(special_pool,len(special_pool)))
 
+print(s_lowercase_pool, s_lowercase_pool, s_number_pool, s_special_pool)
 
 for index in range(len(uppercase_pool)):
      password += s_uppercase_pool[index]
@@ -91,6 +92,6 @@ for index in range(len(special_pool)):
      if len(password) - num_upper - num_lower - num_nums == num_special:
         break 
 
-shuffled_pw = random.shuffle(list(password))
+shuffled_pw = ''.join(random.sample(password,len(password)))
 
-print(f"Your new password is: {str(shuffled_pw)}")                              
+print(f"Your new password is: {shuffled_pw}")                              
