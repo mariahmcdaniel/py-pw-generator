@@ -87,5 +87,6 @@ for index in range(len(special_pool)):
      password += special_pool[index]
      if len(password) - num_upper - num_lower - num_nums == num_special:
         break 
+random.shuffle(list(password))
 
-print(f"Your new password is: {random.shuffle(password)}")                              
+print(f"Your new password is: {str(password)}")                              
