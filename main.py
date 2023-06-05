@@ -1,3 +1,8 @@
+uppercase_pool = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+lowercase_pool = uppercase_pool.lower()
+
+print(lowercase_pool)
+
 while True:
     try:
       num_char = int(input("How many total characters would you like in your password? Enter a number: "))
