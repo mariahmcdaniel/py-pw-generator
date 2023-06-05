@@ -6,6 +6,7 @@ number_pool = "0123456789"
 special_pool = "!#$%&()*+,-./:;<=>?@[]^_`{|}~"
 password = ""
 
+pools = [uppercase_pool, lowercase_pool, number_pool, special_pool]
 
 while True:
     try:
@@ -55,30 +56,35 @@ if num_left == 0:
 else:
   print(f"Your password will contain {num_special} special characters and the {num_left} remaining will be of a random character type")
   types = [num_upper, num_lower, num_nums, num_special]
-  for type in types:
+  
+  while num_left > 0:
+    for type in types:
      type += 1
      num_left -= 1
      if num_left == 0:
         break
-     
+
+for pool in pools:
+   random.shuffle(list(pool))
+
 
 for index in range(len(uppercase_pool)):
-     password += random.shuffle(uppercase_pool)[index]
-     if len(password) == num_upper:
+     password += uppercase_pool[index]
+     if len(password) == int(num_upper):
         break 
 
 for index in range(len(lowercase_pool)):
-     password += random.shuffle(lowercase_pool)[index]
+     password += lowercase_pool[index]
      if len(password) - len(num_upper) == num_lower:
         break
 
 for index in range(len(number_pool)):
-     password += random.shuffle(number_pool)[index]
+     password += number_pool[index]
      if len(password) - len(num_upper) -len(num_lower) == num_nums:
         break   
 
 for index in range(len(special_pool)):
-     password += random.shuffle(special_pool)[index]
+     password += special_pool[index]
      if len(password) - len(num_upper) - len(num_lower) - len(num_nums) == num_special:
         break 
 
