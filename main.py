@@ -10,7 +10,7 @@ while True:
       break
     except ValueError:
        print("This is not a number. Try again.")
-print(f"Your password will contain {num_char} characters. Next, lets break down which types of characters you would like to have in your password. The options are \n-uppercase letters \nlowercase letters \nnumbers \nspecial characters")
+print(f"Your password will contain {num_char} characters. Next, lets break down which types of characters you would like to have in your password. The options are \n-uppercase letters ({uppercase_pool}) \n-lowercase letters ({lowercase_pool}) \n-numbers ({number_pool}) \n-special characters ({special_pool})")
 
 while True:
     try:
@@ -20,11 +20,34 @@ while True:
        print("This is not a number. Try again.")
 print(f"Your password will contain {num_upper} uppercase characters.")
 
+num_left = num_char - num_upper
+
 while True:
     try:
-      num_lower = int(input(f"There are {num_char - num_upper} characters left to account for. How many of these would you like to be lowercase letters? Enter a number: "))
+      num_lower = int(input(f"There are {num_left} characters left to account for. How many of these would you like to be lowercase letters? Enter a number: "))
+      num_left -= num_lower
       break
     except ValueError:
        print("This is not a number. Try again.")
 print(f"Your password will contain {num_lower} lowercase characters.")
 
+while True:
+    try:
+      num_nums = int(input(f"There are {num_left} characters left to account for. How many of these would you like to be numbers? Enter a number: "))
+      num_left -= num_nums
+      break
+    except ValueError:
+       print("This is not a number. Try again.")
+print(f"Your password will contain {num_nums} lowercase characters.")
+
+while True:
+    try:
+      num_special = int(input(f"How many special characters would you like in your password? There are {num_left} characters left to be assigned, if you do not want this many special characters, the remainder will be given a randomly assigned character type. Enter a number: "))
+      num_left -= num_special
+      break
+    except ValueError:
+       print("This is not a number. Try again.")
+if num_left == 0:       
+  print(f"Your password will contain {num_special} special characters.")
+else:
+  print(f"Your password will contain {num_special} special characters and the {num_left} remaining will be of a random character type")
