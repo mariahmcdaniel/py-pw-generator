@@ -84,7 +84,7 @@ for index in range(len(lowercase_pool)):
 
 for index in range(len(number_pool)):
      password += s_number_pool[index]
-     if len(password) - num_upper -num_lower == num_nums:
+     if len(password) - num_upper - num_lower == num_nums:
         break   
 
 for index in range(len(special_pool)):
