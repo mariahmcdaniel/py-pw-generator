@@ -14,7 +14,7 @@ while True:
       break
     except ValueError:
        print("This is not a number. Try again.")
-print(f"Your password will contain {num_char} characters. Next, lets break down which types of characters you would like to have in your password. The options are \n-uppercase letters ({uppercase_pool}) \n-lowercase letters ({lowercase_pool}) \n-numbers ({number_pool}) \n-special characters ({special_pool})")
+print(f"Your password will contain {num_char} characters. \n\nNext, lets break down which types of characters you would like to have in your password. \nThe options are \n-uppercase letters ({uppercase_pool}) \n-lowercase letters ({lowercase_pool}) \n-numbers ({number_pool}) \n-special characters ({special_pool})")
 
 while True:
     try:
