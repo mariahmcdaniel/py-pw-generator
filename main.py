@@ -46,7 +46,7 @@ print(f"Your password will contain {num_nums} lowercase characters.")
 
 while True:
     try:
-      num_special = int(input(f"How many special characters would you like in your password? \n\n Note: There are {num_left} characters left to be assigned. \nif you do not want this many special characters, the remainder will be given a randomly assigned character type. Enter a number: "))
+      num_special = int(input(f"How many special characters would you like in your password? \n\n Note: There are {num_left} characters left to be assigned. \nIf you do not want this many special characters, the remainder will be given a randomly assigned character type. Enter a number: "))
       num_left -= num_special
       break
     except ValueError:
